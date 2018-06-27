@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from emaillist import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('emaillist/', views.index),
+    path('emaillist/form', views.form),
+    path('emaillist/add', views.add)
 ]
